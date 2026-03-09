@@ -2,51 +2,394 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name – PhD Student</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Academic Homepage</title>
+  <meta
+    name="description"
+    content="Simple academic homepage template with sections for about, research, publications, and contact."
+  />
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-    h1 { margin-bottom: 0; }
-    .subtitle { color: #555; margin-top: 0.2rem; }
-    a { color: #0066cc; }
-    nav a { margin-right: 1rem; }
+    :root {
+      --bg: #f7f2e9;
+      --bg-soft: rgba(255, 255, 255, 0.62);
+      --panel: rgba(255, 255, 255, 0.74);
+      --line: rgba(62, 49, 40, 0.14);
+      --text: #1f1c19;
+      --muted: #645d56;
+      --primary: #b04d2f;
+      --secondary: #0d7a7d;
+      --accent: #8a3ffc;
+      --shadow: 0 18px 50px rgba(60, 45, 28, 0.12);
+      --radius: 22px;
+      --content-width: 760px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(176, 77, 47, 0.18), transparent 28rem),
+        radial-gradient(circle at top right, rgba(13, 122, 125, 0.14), transparent 24rem),
+        linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.15em;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .page {
+      width: min(100% - 2rem, var(--content-width));
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: 0 auto 2rem;
+      backdrop-filter: blur(16px);
+      background: rgba(247, 242, 233, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(60, 45, 28, 0.08);
+    }
+
+    .topbar nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      justify-content: center;
+      padding: 0.85rem 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .topbar a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--text);
+    }
+
+    .hero,
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 3rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -3rem;
+      top: -3rem;
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(138, 63, 252, 0.14), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .section-label {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.08;
+      font-family: "Arial Narrow", Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      letter-spacing: -0.05em;
+      max-width: 12ch;
+    }
+
+    .hero .subtitle {
+      max-width: 34rem;
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero .intro {
+      max-width: 42rem;
+      margin: 1.4rem 0 0;
+      font-size: 1.06rem;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.8rem;
+    }
+
+    .quick-links a {
+      display: inline-block;
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    main {
+      display: grid;
+      gap: 1.3rem;
+    }
+
+    .panel {
+      padding: 2rem;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.85rem 0 0;
+    }
+
+    .research-list,
+    .publication-list,
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0;
+    }
+
+    .research-list li,
+    .publication-list li {
+      padding: 1rem 0 0 1.15rem;
+      border-left: 3px solid var(--primary);
+    }
+
+    .research-list li + li,
+    .publication-list li + li,
+    .link-list li + li {
+      margin-top: 1.2rem;
+    }
+
+    .research-list h3,
+    .publication-list h3 {
+      font-size: 1.18rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .publication-meta,
+    .small-note {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .equation-box {
+      margin-top: 1.25rem;
+      padding: 1rem 1.2rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.52);
+      border: 1px dashed rgba(62, 49, 40, 0.2);
+    }
+
+    .link-list a {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    code {
+      padding: 0.1rem 0.35rem;
+      border-radius: 0.35rem;
+      background: rgba(31, 28, 25, 0.06);
+      font-size: 0.95em;
+    }
+
+    footer {
+      margin-top: 1.6rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: min(100% - 1rem, var(--content-width));
+        padding-top: 1rem;
+      }
+
+      .hero,
+      .panel {
+        padding: 1.4rem;
+      }
+
+      .topbar {
+        position: static;
+      }
+    }
   </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      },
+      svg: {
+        fontCache: "global"
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p class="subtitle">PhD student in [Field], [University]</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="page">
+    <header class="topbar">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Short paragraph about your research interests and group.</p>
-  </section>
+    <section class="hero">
+      <p class="eyebrow">Academic Homepage Template</p>
+      <h1>Your Name</h1>
+      <p class="subtitle">PhD Student in [Field] · [University]</p>
+      <p class="intro">
+        Replace this paragraph with a short introduction to your work. Keep it simple:
+        what you study, why it matters, and what methods you use.
+      </p>
+      <div class="quick-links">
+        <a href="mailto:you@university.edu">Email Me</a>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
 
-  <section id="research">
-    <h2>Research</h2>
-    <ul>
-      <li>Topic 1 – one-sentence description.</li>
-      <li>Topic one-sentence description.</li>
-    </ul>
-  </section>
+    <main>
+      <section class="panel" id="about">
+        <p class="section-label">About</p>
+        <h2>Who You Are</h2>
+        <p>
+          This section is just normal HTML text. To edit it, replace these sentences with your own.
+          If you want a link, write it like this:
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">example link</a>.
+        </p>
+        <p>
+          You can also write inline equations with LaTeX syntax, like
+          <code>$E = mc^2$</code>, which will render as $E = mc^2$ once the page loads.
+        </p>
+        <div class="equation-box">
+          <p class="small-note">Example displayed equation:</p>
+          <p>$$i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi$$</p>
+        </div>
+      </section>
 
-  <section id="publications">
-    <h2>Selected Publications</h2>
-    <ol>
-      <li>Author, <em>Title</em>, Journal (Year). [<a href="#">PDF</a>]</li>
-    </ol>
-  </section>
+      <section class="panel" id="research">
+        <p class="section-label">Research</p>
+        <h2>Current Projects</h2>
+        <ul class="research-list">
+          <li>
+            <h3>Project Title One</h3>
+            <p>
+              One short paragraph explaining the problem, the method, and the goal.
+              Keep each project to 2 or 3 sentences so the page stays readable.
+            </p>
+          </li>
+          <li>
+            <h3>Project Title Two</h3>
+            <p>
+              You can add more projects by copying one <code>&lt;li&gt; ... &lt;/li&gt;</code>
+              block and editing the title and text.
+            </p>
+          </li>
+          <li>
+            <h3>Project Title Three</h3>
+            <p>
+              If a project has a paper or code repository, add a link directly in the description,
+              for example <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
+            </p>
+          </li>
+        </ul>
+      </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: you@university.edu</p>
-  </section>
+      <section class="panel" id="publications">
+        <p class="section-label">Publications</p>
+        <h2>Selected Papers</h2>
+        <ul class="publication-list">
+          <li>
+            <h3>Paper Title Goes Here</h3>
+            <p class="publication-meta">Your Name, Collaborator Name · Journal Name · 2026</p>
+            <p>
+              Add the citation however you prefer. For a paper link or PDF, add
+              <a href="https://doi.org" target="_blank" rel="noopener noreferrer">DOI</a>
+              or
+              <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
+            </p>
+          </li>
+          <li>
+            <h3>Another Publication</h3>
+            <p class="publication-meta">Author List · Conference or Journal · Year</p>
+            <p>Keep the formatting consistent so it is easy to update later.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel" id="contact">
+        <p class="section-label">Contact</p>
+        <h2>Find Me</h2>
+        <p>Email: <a href="mailto:you@university.edu">you@university.edu</a></p>
+        <ul class="link-list">
+          <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+          <li><a href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      Edit this single file: <code>docs/index.html</code>
+    </footer>
+  </div>
 </body>
 </html>

@@ -23,12 +23,11 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text);
-  outline: 5px solid hotpink !important;
   background:
-    radial-gradient(circle at 12% 14%, rgba(125, 90, 230, 0.30), transparent 0 22rem),
-    radial-gradient(circle at 88% 18%, rgba(146, 99, 166, 0.64), transparent 0 24rem),
-    radial-gradient(circle at 8% 80%, rgba(120, 183, 220, 0.22), transparent 0 26rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 32%),
+    radial-gradient(circle at 15% 12%, rgba(230, 120, 90, 0.32), transparent 0 22rem),
+    radial-gradient(circle at 85% 10%, rgba(40, 150, 160, 0.28), transparent 0 24rem),
+    radial-gradient(circle at 10% 88%, rgba(155, 120, 220, 0.24), transparent 0 26rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 32%),
     linear-gradient(#ece3f6, #e3d8f0);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.75;
@@ -130,14 +129,23 @@ a:hover {
   align-items: start;
 }
 
+/* .hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.5rem;
+  height: 7rem;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+} */
 .hero::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0.35rem;
-  width: 0.85rem;
+  width: 3px;
   height: 7rem;
-  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  background: rgba(232, 38, 239, 0.247);
 }
 
 .eyebrow,

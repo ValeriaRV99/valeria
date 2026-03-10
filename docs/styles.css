@@ -174,7 +174,7 @@ h3 {
 h1 {
   max-width: 10ch;
   font-size: clamp(3.2rem, 8vw, 6.4rem);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.09em;
 }
 
 .hero .subtitle {

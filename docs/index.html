@@ -25,6 +25,10 @@
 <body>
   <div class="page">
     <header class="topbar">
+      <div class="site-mark">
+        <span class="site-mark__name">Your Name</span>
+        <span class="site-mark__tag">research notes</span>
+      </div>
       <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -34,98 +38,141 @@
     </header>
 
     <section class="hero">
-      <p class="eyebrow">Academic Homepage Template</p>
-      <h1>Your Name</h1>
-      <p class="subtitle">PhD Student in [Field] · [University]</p>
-      <p class="intro">
-        Replace this paragraph with a short introduction to your work. Keep it simple:
-        what you study, why it matters, and what methods you use.
-      </p>
-      <div class="quick-links">
-        <a href="mailto:you@university.edu">Email Me</a>
-        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <p class="eyebrow">Academic Homepage Template</p>
+          <h1>Your Name</h1>
+          <p class="subtitle">PhD Student in [Field] · [University]</p>
+          <p class="intro">
+            Replace this paragraph with a short introduction to your work. Keep it simple:
+            what you study, why it matters, and what methods you use.
+          </p>
+          <div class="quick-links">
+            <a href="mailto:you@university.edu">Email Me</a>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <aside class="hero-note">
+          <p class="hero-note__label">Currently</p>
+          <p>
+            Add a short note here about your current work, fellowship, or a paper you want people to notice first.
+          </p>
+          <p class="small-note">
+            Example: “Working on orbital-free DFT, excited-state methods, and scientific software.”
+          </p>
+        </aside>
       </div>
     </section>
 
     <main>
       <section class="panel" id="about">
-        <p class="section-label">About</p>
-        <h2>Who You Are</h2>
-        <p>
-          This section is just normal HTML text. To edit it, replace these sentences with your own.
-          If you want a link, write it like this:
-          <a href="https://example.com" target="_blank" rel="noopener noreferrer">example link</a>.
-        </p>
-        <p>
-          You can also write inline equations with LaTeX syntax, like
-          <code>$E = mc^2$</code>, which will render as $E = mc^2$ once the page loads.
-        </p>
-        <div class="equation-box">
-          <p class="small-note">Example displayed equation:</p>
-          <p>$$i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi$$</p>
+        <div class="section-grid">
+          <div class="section-head">
+            <p class="section-label">About</p>
+            <h2>Who You Are</h2>
+          </div>
+          <div class="section-body">
+            <p class="lead">
+              This section is just normal HTML text. Replace these sentences with your own summary of your research,
+              group, and scientific interests.
+            </p>
+            <p>
+              If you want a link, write it like this:
+              <a href="https://example.com" target="_blank" rel="noopener noreferrer">example link</a>.
+            </p>
+            <p>
+              You can also write inline equations with LaTeX syntax, like
+              <code>$E = mc^2$</code>, which will render as $E = mc^2$ once the page loads.
+            </p>
+            <div class="equation-box">
+              <p class="small-note">Example displayed equation:</p>
+              <p>$$i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi$$</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="panel" id="research">
-        <p class="section-label">Research</p>
-        <h2>Current Projects</h2>
-        <ul class="research-list">
-          <li>
-            <h3>Project Title One</h3>
-            <p>
-              One short paragraph explaining the problem, the method, and the goal.
-              Keep each project to 2 or 3 sentences so the page stays readable.
-            </p>
-          </li>
-          <li>
-            <h3>Project Title Two</h3>
-            <p>
-              You can add more projects by copying one <code>&lt;li&gt; ... &lt;/li&gt;</code>
-              block and editing the title and text.
-            </p>
-          </li>
-          <li>
-            <h3>Project Title Three</h3>
-            <p>
-              If a project has a paper or code repository, add a link directly in the description,
-              for example <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
-            </p>
-          </li>
-        </ul>
+        <div class="section-grid">
+          <div class="section-head">
+            <p class="section-label">Research</p>
+            <h2>Current Projects</h2>
+          </div>
+          <div class="section-body">
+            <ul class="research-list">
+              <li>
+                <h3>Project Title One</h3>
+                <p>
+                  One short paragraph explaining the problem, the method, and the goal.
+                  Keep each project to 2 or 3 sentences so the page stays readable.
+                </p>
+              </li>
+              <li>
+                <h3>Project Title Two</h3>
+                <p>
+                  You can add more projects by copying one <code>&lt;li&gt; ... &lt;/li&gt;</code>
+                  block and editing the title and text.
+                </p>
+              </li>
+              <li>
+                <h3>Project Title Three</h3>
+                <p>
+                  If a project has a paper or code repository, add a link directly in the description,
+                  for example <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="panel" id="publications">
-        <p class="section-label">Publications</p>
-        <h2>Selected Papers</h2>
-        <ul class="publication-list">
-          <li>
-            <h3>Paper Title Goes Here</h3>
-            <p class="publication-meta">Your Name, Collaborator Name · Journal Name · 2026</p>
-            <p>
-              Add the citation however you prefer. For a paper link or PDF, add
-              <a href="https://doi.org" target="_blank" rel="noopener noreferrer">DOI</a>
-              or
-              <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
-            </p>
-          </li>
-          <li>
-            <h3>Another Publication</h3>
-            <p class="publication-meta">Author List · Conference or Journal · Year</p>
-            <p>Keep the formatting consistent so it is easy to update later.</p>
-          </li>
-        </ul>
+        <div class="section-grid">
+          <div class="section-head">
+            <p class="section-label">Publications</p>
+            <h2>Selected Papers</h2>
+          </div>
+          <div class="section-body">
+            <ul class="publication-list">
+              <li>
+                <h3>Paper Title Goes Here</h3>
+                <p class="publication-meta">Your Name, Collaborator Name · Journal Name · 2026</p>
+                <p>
+                  Add the citation however you prefer. For a paper link or PDF, add
+                  <a href="https://doi.org" target="_blank" rel="noopener noreferrer">DOI</a>
+                  or
+                  <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
+                </p>
+              </li>
+              <li>
+                <h3>Another Publication</h3>
+                <p class="publication-meta">Author List · Conference or Journal · Year</p>
+                <p>Keep the formatting consistent so it is easy to update later.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="panel" id="contact">
-        <p class="section-label">Contact</p>
-        <h2>Find Me</h2>
-        <p>Email: <a href="mailto:you@university.edu">you@university.edu</a></p>
-        <ul class="link-list">
-          <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
-          <li><a href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a></li>
-        </ul>
+        <div class="section-grid">
+          <div class="section-head">
+            <p class="section-label">Contact</p>
+            <h2>Find Me</h2>
+          </div>
+          <div class="section-body">
+            <div class="contact-card">
+              <p class="small-note">Email</p>
+              <p><a href="mailto:you@university.edu">you@university.edu</a></p>
+            </div>
+            <ul class="link-list">
+              <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+              <li><a href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
 

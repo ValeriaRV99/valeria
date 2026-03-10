@@ -24,9 +24,9 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at 12% 14%, rgba(230, 120, 90, 0.30), transparent 0 15rem),
-    radial-gradient(circle at 88% 18%, rgba(40, 150, 160, 0.26), transparent 0 18rem),
-    radial-gradient(circle at 8% 80%, rgba(155, 120, 220, 0.22), transparent 0 20rem),
+    radial-gradient(circle at 12% 14%, rgba(125, 90, 230, 0.3), transparent 0 22rem),
+    radial-gradient(circle at 88% 18%, rgba(146, 99, 166, 0.64), transparent 0 24rem),
+    radial-gradient(circle at 8% 80%, rgba(120, 183, 220, 0.22), transparent 0 26rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 32%),
     linear-gradient(#ece3f6, #e3d8f0);
   font-family: Georgia, "Times New Roman", serif;

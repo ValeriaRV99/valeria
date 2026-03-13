@@ -5,9 +5,9 @@
   --line-strong: rgba(41, 36, 31, 0.34);
   --text: #201c18;
   --muted: #6b635b;
-  --primary: #c14e2c;
-  --secondary: #0d7c80;
-  --accent: #b43cff;
+  --primary: #b43cff;
+  --secondary: #d236a1;
+  --accent: #07b19adb;
   --content-width: 860px;
 }
 
@@ -174,7 +174,12 @@ h3 {
 h1 {
   max-width: 10ch;
   font-size: clamp(3.2rem, 8vw, 6.4rem);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.05 em;
+}
+
+.hero h1 {
+  max-width: none;
+  white-space: nowrap;
 }
 
 .hero .subtitle {
@@ -303,9 +308,28 @@ p {
 .research-list li,
 .publication-list li {
   padding: 1.15rem 1.3rem 1.15rem 1.5rem;
-  background: var(--paper);
+  background: transparent;
   border-left: 4px solid var(--primary);
   box-shadow: 0 14px 30px rgba(72, 57, 38, 0.06);
+}
+
+.research-list li:nth-child(1) {
+  border-left-color: var(--primary);
+}
+.research-list li:nth-child(1) h3 a {
+  color: var(--primary);
+}
+.research-list li:nth-child(2) {
+  border-left-color: var(--secondary);
+}
+.research-list li:nth-child(2) h3 a {
+  color: var(--secondary);
+}
+.research-list li:nth-child(3) {
+  border-left-color: var(--accent);
+}
+.research-list li:nth-child(3) h3 a {
+  color: var(--accent);
 }
 
 .publication-list li {
@@ -326,11 +350,12 @@ p {
   font-size: 0.9rem;
 }
 
+
 .equation-box {
   margin-top: 1.5rem;
   max-width: 46rem;
   padding: 1.15rem 1.25rem;
-  background: var(--paper);
+  background: transparent;
   border-left: 4px solid var(--accent);
 }
 

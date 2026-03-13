@@ -38,8 +38,8 @@
     </header>
 
     <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-main">
+      <!-- <div class="hero-grid"> -->
+        <!-- <div class="hero-main"> -->
           <p class="eyebrow">Academic Homepage</p>
           <h1>Valeria Rios-Vargas</h1>
           <p class="subtitle">PhD Student in computational chemistry · Rutgers-Newark University</p>
@@ -47,11 +47,12 @@
             
           </p>
           <div class="quick-links">
-            <a href="mailto:you@university.edu">Email Me</a>
-            <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="valeria.rios@rutgers.edu">Email Me</a>
+            <a href="https://scholar.google.com/citations?user=jt0h6oQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             <a href="https://github.com/ValeriaRV99" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://orcid.org/0000-0003-0590-1695" target="_blank" rel="noopener noreferrer">ORCID</a>
           </div>
-        </div>
+        <!-- </div> -->
         <!-- <aside class="hero-note">
           <p class="hero-note__label">Currently</p>
           <p>
@@ -61,7 +62,7 @@
             Example: “Working on orbital-free DFT, excited-state methods, and scientific software.”
           </p>
         </aside> -->
-      </div>
+      <!-- </div> -->
     </section>
 
     <main>
@@ -73,23 +74,23 @@
           </div>
           <div class="section-body">
             <p class="lead">
-            I am a PhD student in computational chemistry at Rutgers-Newark University. I am interested in the development of new methods for computational chemistry and the application of these methods to the study of chemical reactions and materials.
-            I am currently working in Orbital-Free Density Functional Theory (OF-DFT) and its time-dependent extension (OF-TDDFT). I am also interested on the develoment of machine learning methods for quantum chemestry.
-            I develop software and workflows using python packages like DFTpy, QEpy, pyscf, scickitlearn, etc.
-       
+            I am a PhD student at Rutgers-Newark University in the Department of Physics under the supervision of Prof. <a href="https://sites.rutgers.edu/prg/" target="_blank" rel="noopener noreferrer">Mechele Pavanello</a>. 
+            I am interested in the development of new methods for computational chemistry and the application of these methods to the study of chemical reactions and materials.
+            I am currently working in Orbital-Free Density Functional Theory (OF-DFT) and its time-dependent extension (OF-TDDFT). One of my main interests is the develoment of machine learning methods for quantum chemistry.
+            
+            <!-- I belong to the Pavanello Research group 
+            <a href="https://sites.rutgers.edu/prg/" target="_blank" rel="noopener noreferrer">Pavanello research group (PRG)</a>. -->
+
             </p>
+            
             <p>
-              If you want a link, write it like this:
-              <a href="https://example.com" target="_blank" rel="noopener noreferrer">example link</a>.
-            </p>
-            <p>
-              You can also write inline equations with LaTeX syntax, like
+              <!-- You can also write inline equations with LaTeX syntax, like
               <code>$E = mc^2$</code>, which will render as $E = mc^2$ once the page loads.
             </p>
             <div class="equation-box">
               <p class="small-note">Example displayed equation:</p>
               <p>$$i\hbar \frac{\partial \psi}{\partial t} = \hat{H}\psi$$</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -109,8 +110,9 @@
                   </a>
                 </h3>
                 <p>
-                  Brief 2–3 sentence description of your OF‑DFT work, methods,
-                  and applications.
+                    Orbital-Free Density Functional Theory (OF-DFT) is a method that allows for the calculation of the electronic structure of a system without the need to compute individual electronic orbitals. 
+                    It is a powerful method that can scale linearly with the number of particles in a system, making it ideal for large-scale simulations of materials. 
+                    The computational cost depends on the approximation used for the kinetic energy density functional (KEDF).
                 </p>
               </li>
               <li>
@@ -120,8 +122,7 @@
                   </a>
                 </h3>
                 <p>
-                  Short explanation of your time‑dependent developments and the
-                  kinds of excitations or dynamics you study.
+                  Time-Dependent Orbital-Free Density Functional Theory (TD-OF-DFT) is a theory that allows for the study of systems that evolve in time. Whithin this formalism a system can be study using real-time propagation (RT) or linear-response theory (LR).
                 </p>
               </li>
               <li>
@@ -131,8 +132,7 @@
                   </a>
                 </h3>
                 <p>
-                  Describe how you use ML models within subsystem DFT:
-                  what they learn and why it matters.
+                  We want to develop machine learning methods for subsystem density functionals (SDFT) that can be used to study the response of a system to an external perturbation.
                 </p>
               </li>
             </ul>
@@ -149,19 +149,25 @@
           <div class="section-body">
             <ul class="publication-list">
               <li>
-                <h3>Paper Title Goes Here</h3>
-                <p class="publication-meta">Your Name, Collaborator Name · Journal Name · 2026</p>
+                <h3>Pseudopotentials for Orbital-Free DFT: Capturing Nonlocality and Correcting Functional Approximants</h3>
+                <p class="publication-meta">V. Rios-Vargas, E. Oyeniyi, X. Shao, W. F. I. Elsayed, S. J. Ogenyi, A. Okello, M. Pavanello · arXiv preprint ·  2025</p>
                 <p>
-                  Add the citation however you prefer. For a paper link or PDF, add
-                  <a href="https://doi.org" target="_blank" rel="noopener noreferrer">DOI</a>
-                  or
-                  <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>.
+                  <!-- Add the citation however you prefer. For a paper link or PDF, add -->
+                  <a href="https://arxiv.org/abs/2511.19892" target="_blank" rel="noopener noreferrer">arXiv</a>
+                  <!-- or
+                  <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>. -->
                 </p>
               </li>
               <li>
-                <h3>Another Publication</h3>
-                <p class="publication-meta">Author List · Conference or Journal · Year</p>
-                <p>Keep the formatting consistent so it is easy to update later.</p>
+                <h3>Effective Wang-Teter kernels for improved orbital-free density functional theory simulations</h3>
+                <p class="publication-meta">V. Rios-Vargas, X. Shao, S. B. Trickey, M. Pavanello · Physical Review B · 2024</p>
+                <!-- <p>Keep the formatting consistent so it is easy to update later.</p> -->
+                <p>
+                  <!-- Add the citation however you prefer. For a paper link or PDF, add -->
+                  <a href="https://doi.org/10.1103/PhysRevB.110.085129" target="_blank" rel="noopener noreferrer">DOI</a>
+                  <!-- or
+                  <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>. -->
+                </p>
               </li>
             </ul>
           </div>
@@ -177,21 +183,21 @@
           <div class="section-body">
             <div class="contact-card">
               <p class="small-note">Email</p>
-              <p><a href="mailto:you@university.edu">you@university.edu</a></p>
+              <p><a href="mailto:valeria.rios@rutgers.edu">valeria.rios@rutgers.edu</a></p>
             </div>
             <ul class="link-list">
-              <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
-              <li><a href="https://orcid.org" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+              <li><a href="https://github.com/ValeriaRV99" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://scholar.google.com/citations?user=jt0h6oQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+              <li><a href="https://orcid.org/0000-0003-0590-1695" target="_blank" rel="noopener noreferrer">ORCID</a></li>
             </ul>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <!-- <footer>
       Edit this single file: <code>docs/index.html</code>
-    </footer>
+    </footer> -->
   </div>
 </body>
 </html>
